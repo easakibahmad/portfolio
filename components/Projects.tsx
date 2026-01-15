@@ -7,7 +7,16 @@ import { HiExternalLink } from 'react-icons/hi';
 import { FaGithub } from 'react-icons/fa';
 import { useAppSelector } from '@/app/hooks';
 
-const projects = [
+interface Project {
+  title: string;
+  description: string;
+  type: string;
+  company?: string;
+  github?: string;
+  githubServer?: string;
+}
+
+const projects: Project[] = [
   {
     title: 'Yaana Technologies, LLC',
     description: 'Internal full-stack web application.',
