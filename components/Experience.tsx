@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { HiBriefcase, HiCalendar, HiExternalLink } from 'react-icons/hi';
+import { HiBriefcase, HiCalendar, HiExternalLink, HiCheckCircle } from 'react-icons/hi';
 import { useAppSelector } from '@/app/hooks';
 
 const experiences = [
@@ -108,13 +108,26 @@ export default function Experience() {
                     </div>
                     <p className="text-xl text-blue-400 mb-4">{exp.position}</p>
                     {Array.isArray(exp.description) ? (
-                      <ul className={`space-y-2 ${
+                      <ul className={`space-y-3 ${
                         theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
                       }`}>
                         {exp.description.map((desc, i) => (
-                          <li key={i} className="flex items-start gap-2">
-                            <span className="text-purple-400 mt-2">•</span>
-                            <span>{desc}</span>
+                          <li key={i} className="flex items-start gap-3">
+                            <div className={`flex-shrink-0 mt-0.5 p-1 rounded-full ${
+                              theme === 'dark' 
+                                ? 'bg-purple-500/20' 
+                                : 'bg-purple-100'
+                            }`}>
+                              <HiCheckCircle 
+                                size={16} 
+                                className={`${
+                                  theme === 'dark' 
+                                    ? 'text-purple-400' 
+                                    : 'text-purple-600'
+                                }`} 
+                              />
+                            </div>
+                            <span className="flex-1 leading-relaxed">{desc}</span>
                           </li>
                         ))}
                       </ul>

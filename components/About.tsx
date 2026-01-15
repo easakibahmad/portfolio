@@ -38,13 +38,58 @@ export default function About() {
               : 'hover:shadow-lg hover:shadow-purple-500/10'
           }`}
         >
-          <p className={`text-lg md:text-xl leading-relaxed ${
-            theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
-          }`}>
-            Software Engineer with nearly <span className="text-purple-400 font-semibold">2 years of experience</span> developing scalable applications. Combines frontend expertise in creating responsive, pixel-perfect interfaces (
-            <span className="text-blue-400">React 19, Next.js, Tailwind CSS</span>) with backend skills in 
-            <span className="text-blue-400"> Python (FastAPI)</span> and <span className="text-blue-400">PostgreSQL</span>. Proven ability to design complex database schemas, secure RESTful APIs, and manage production deployments on <span className="text-purple-400">GCP (Cloud Run, Cloud SQL)</span>. Committed to delivering high-performance solutions with clean code.
-          </p>
+          <div className="space-y-6">
+            <p className={`text-lg md:text-xl leading-relaxed ${
+              theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
+            }`}>
+              Software Engineer with nearly <span className="text-purple-400 font-semibold">2 years of experience</span> developing scalable applications. Committed to delivering high-performance solutions with clean code.
+            </p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="space-y-3">
+                <h3 className={`text-lg font-bold ${
+                  theme === 'dark' ? 'text-purple-400' : 'text-purple-600'
+                }`}>
+                  Frontend Expertise
+                </h3>
+                <p className={`text-base leading-relaxed ${
+                  theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
+                }`}>
+                  Creating responsive, pixel-perfect interfaces with{' '}
+                  <span className="text-blue-400 font-medium">React 19</span>,{' '}
+                  <span className="text-blue-400 font-medium">Next.js</span>, and{' '}
+                  <span className="text-blue-400 font-medium">Tailwind CSS</span>.
+                </p>
+              </div>
+              
+              <div className="space-y-3">
+                <h3 className={`text-lg font-bold ${
+                  theme === 'dark' ? 'text-purple-400' : 'text-purple-600'
+                }`}>
+                  Backend Skills
+                </h3>
+                <p className={`text-base leading-relaxed ${
+                  theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
+                }`}>
+                  Building robust APIs with{' '}
+                  <span className="text-blue-400 font-medium">Python (FastAPI)</span>,{' '}
+                  <span className="text-blue-400 font-medium">Java Spring Boot</span>, and{' '}
+                  <span className="text-blue-400 font-medium">PostgreSQL</span>.
+                </p>
+              </div>
+            </div>
+            
+            <div className={`pt-4 border-t ${
+              theme === 'dark' ? 'border-white/10' : 'border-gray-200'
+            }`}>
+              <p className={`text-base leading-relaxed ${
+                theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
+              }`}>
+                Proven ability to design <span className="text-purple-400 font-medium">complex database schemas</span>, secure <span className="text-purple-400 font-medium">RESTful APIs</span>, and manage <span className="text-purple-400 font-medium">production deployments</span> on{' '}
+                <span className="text-blue-400 font-medium">GCP (Cloud Run, Cloud SQL)</span>.
+              </p>
+            </div>
+          </div>
         </motion.div>
       </div>
     </section>

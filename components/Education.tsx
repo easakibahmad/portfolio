@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { HiAcademicCap } from 'react-icons/hi';
+import { HiAcademicCap, HiExternalLink } from 'react-icons/hi';
 import Image from 'next/image';
 import { useAppSelector } from '@/app/hooks';
 
@@ -67,9 +67,26 @@ export default function Education() {
                     2019 - 2024
                   </span>
                 </div>
-                <p className={`text-xl ${
-                  theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
-                }`}>University of Dhaka</p>
+                <div className="flex items-center gap-2">
+                  <p className={`text-xl ${
+                    theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
+                  }`}>University of Dhaka</p>
+                  <motion.a
+                    href="https://www.du.ac.bd/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    whileHover={{ scale: 1.15, rotate: 5 }}
+                    whileTap={{ scale: 0.95 }}
+                    className={`transition-all duration-200 ${
+                      theme === 'dark' 
+                        ? 'text-purple-400 hover:text-purple-300' 
+                        : 'text-purple-600 hover:text-purple-500'
+                    }`}
+                    aria-label="Visit University of Dhaka website"
+                  >
+                    <HiExternalLink size={18} />
+                  </motion.a>
+                </div>
               </div>
             </div>
           </div>
